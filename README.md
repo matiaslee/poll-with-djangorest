@@ -93,11 +93,18 @@ Hacer checkout del tag `part4.djangorest.part3.generic_class_based_views`:
 $git checkout part4.djangorest.part3.generic_class_based_views
 ``` 
 
-## Parte 4: Autenticación usando JWT. 
+## Autenticación usando JWT. 
 
 Tutorial: https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
 
 Temas: Autenticación usando JWT. 
+
+Hacer checkout del tag `part5.jwt_authentication`:
+
+```
+$git checkout part5.jwt_authentication
+``` 
+
 
  - Notar que en en la sección Further Reading hay un link que explica como usar JWT con react&redux. 
 
