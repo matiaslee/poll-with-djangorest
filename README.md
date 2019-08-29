@@ -39,4 +39,16 @@ Parte 2: https://www.django-rest-framework.org/tutorial/2-requests-and-responses
 
 Temas: Request Objects, Reponse Objects and Status Code. Api Browsability.
 
+Hacer checkout del tag `part3.djangorest.part2`:
+
+```
+$git checkout part3.djangorest.part2
+``` 
+
+
+
+Comparing mains changes: 
+```
+git diff 8e6dfe6d1959fdeaf3d8982746d9b2a1e16072d6 08327b31cd3d2ac1f2c95c4f09aabd73a142a6a7  views.py
+```
  
