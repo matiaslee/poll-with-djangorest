@@ -1,54 +1,50 @@
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 from polls.models import Question
 from polls.serializers import QuestionSerializerWithMS as QuestionSerializer
 
 # Create your views here.
 
-@csrf_exempt
-def question_list(request):
+@api_view(['GET', 'POST'])
+def question_list(request, format=None):
     """
     List all code questions, or create a new question.
     """
     if request.method == 'GET':
         questions = Question.objects.all()
         serializer = QuestionSerializer(questions, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return Response(serializer.data)
 
     elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = QuestionSerializer(data=data)
+        serializer = QuestionSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_201_CREATED)
 
-@csrf_exempt
-def question_detail(request, pk):
+@api_view(['GET', 'PUT', 'DELETE'])
+def question_detail(request, pk, format=None):
     """
     Retrieve, update or delete a code question.
     """
     try:
         question = Question.objects.get(pk=pk)
     except Question.DoesNotExist:
-        return HttpResponse(status=404)
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
         serializer = QuestionSerializer(question)
-        return JsonResponse(serializer.data)
+        return Response(serializer.data)
 
     elif request.method == 'PUT':
-        data = JSONParser().parse(request)
-        serializer = QuestionSerializer(question, data=data)
+        serializer = QuestionSerializer(question, data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors, status=400)
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
         question.delete()
-        return HttpResponse(status=204)
-        
+        return Response(status=status.HTTP_204_NO_CONTENT)
