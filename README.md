@@ -1,6 +1,7 @@
 # poll-with-djangorest: Django poll with Django Rest
 
 **Objetivos**:
+
    - Usar DjangoRest
    - Enteder que DjangoRest no sea magia negra
    - Tener autenticacion con JWT. 
@@ -15,8 +16,10 @@ $ git clone https://github.com/matiaslee/poll-with-djangorest.git
 En la carpeta raiz del repo crear el virtualenv y levantarlo:
 
 ```
+$ cd poll-with-djangorest/
 $ virtualenv venv
-$ source venv\bin\activate
+$ source venv/bin/activate
+$ pip install -r requirements.txt
 ```
 
 Hacer checkout del tag `part1.polls.app`:
