@@ -1,5 +1,10 @@
 # poll-with-djangorest: Django poll with Django Rest
 
+**Objetivos**:
+   - Usar DjangoRest
+   - Enteder que DjangoRest no sea magia negra
+   - Tener autenticacion con JWT. 
+
 ## Descargando el repo.  
 
 Descargar el repositorio con
@@ -46,9 +51,30 @@ $git checkout part3.djangorest.part2
 ``` 
 
 
-
-Comparing mains changes: 
+Comparando cambios principales: 
 ```
 git diff 8e6dfe6d1959fdeaf3d8982746d9b2a1e16072d6 08327b31cd3d2ac1f2c95c4f09aabd73a142a6a7  views.py
 ```
- 
+
+## Notas para la parte 3 de djangorest. 
+
+parte 3: https://www.django-rest-framework.org/tutorial/3-class-based-views/
+
+Hacer checkout del tag `part4.djangorest.part3.class_based_views`:
+
+```
+$git checkout part4.djangorest.part3.class_based_views
+``` 
+
+Hacer checkout del tag `part4.djangorest.part3.mixins`:
+
+```
+$git checkout part4.djangorest.part3.mixins
+``` 
+
+Hacer checkout del tag `part4.djangorest.part3.generic_class_based_views`:
+
+```
+$git checkout part4.djangorest.part3.generic_class_based_views
+``` 
+
