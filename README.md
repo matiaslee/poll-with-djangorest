@@ -73,6 +73,8 @@ git diff 8e6dfe6d1959fdeaf3d8982746d9b2a1e16072d6 08327b31cd3d2ac1f2c95c4f09aabd
 
 parte 3: https://www.django-rest-framework.org/tutorial/3-class-based-views/
 
+Temas: Class Based Views, Mixins, Generic Class Based Views.
+
 Hacer checkout del tag `part4.djangorest.part3.class_based_views`:
 
 ```
@@ -91,3 +93,16 @@ Hacer checkout del tag `part4.djangorest.part3.generic_class_based_views`:
 $git checkout part4.djangorest.part3.generic_class_based_views
 ``` 
 
+## Parte 4: Autenticación usando JWT. 
+
+Tutorial: https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
+
+Temas: Autenticación usando JWT. 
+
+ - Notar que en en la sección Further Reading hay un link que explica como usar JWT con react&redux. 
+
+## Más
+
+El tutorial de DjangoRest sigue. En la parte 4 se ve como filtrar contenido por usuario y otras formas de autenticación.:
+ 
+https://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
