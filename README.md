@@ -28,6 +28,16 @@ Hacer checkout del tag `part1.polls.app`:
 $git checkout part1.polls.app
 ``` 
 
+Levantar el server local de django e ingresar al admin: 
+
+```
+./manage.py runserver
+```
+Entrar a http://localhost:8000/admin
+
+Usuario y password: `ingenieria` 
+
+
 
 ## Notas para la parte 1 de djangorest. 
 
